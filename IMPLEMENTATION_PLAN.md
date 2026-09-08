@@ -11,10 +11,10 @@ Build and publish a polished, responsive florist storefront for **Flowers by Pat
 5. **Progressive enhancement** — the core storefront works as HTML/CSS/JavaScript. Three.js is used only for a subtle hero atmosphere and is disabled for reduced-motion users or when WebGL is unavailable.
 
 ## Information architecture
-- Announcement bar: same-day/local-delivery message.
+- Announcement bar: fresh/local-delivery message.
 - Sticky header: brand, Shop / Occasions / Weddings / Our Story, cart.
 - Hero: editorial headline, primary CTA, secondary CTA, seasonal real-photo composition.
-- Occasion rail: Birthday, Love, Sympathy, Celebration, Just Because, New Baby.
+- Occasion rail: Birthday, Love & Romance, Sympathy, Celebration, Just Because.
 - Best sellers: 6 shoppable bouquet cards with prices and add-to-cart actions.
 - Delivery story strip: practical value proposition and CTA.
 - Editorial split: “Made by hand, chosen with feeling” + flower-shop photography.
@@ -27,7 +27,7 @@ Build and publish a polished, responsive florist storefront for **Flowers by Pat
 ## Visual system
 - **Palette:** deep botanical green, warm cream, muted blush, terracotta/coral accent, oxblood editorial accent.
 - **Type:** high-contrast serif display font paired with a clean humanist sans-serif.
-- **Surface:** warm paper texture created with CSS gradients/noise-like layering; rounded cards used selectively.
+- **Surface:** warm paper texture created with CSS gradients; rounded cards used selectively.
 - **Photography:** free-to-use Unsplash photographs with responsive crop treatment and lazy loading.
 - **Motion:** restrained fades, card lifts, testimonial cycling, and a low-opacity Three.js floating-petal layer in the hero.
 
@@ -37,7 +37,7 @@ Build and publish a polished, responsive florist storefront for **Flowers by Pat
 - Remote Google Fonts and Unsplash image delivery.
 - Three.js loaded from jsDelivr and used as optional progressive enhancement.
 - Cart state stored in `localStorage`; checkout is represented as an enquiry/order-review action because GitHub Pages cannot run secure payment processing on its own.
-- Accessible interactions: semantic buttons/links, focus states, keyboard-closeable drawers/menu, `aria-live` cart count, reduced-motion support.
+- Accessible interactions: semantic buttons/links, focus states, keyboard-closeable drawer/menu, `aria-live` cart count, reduced-motion support.
 
 ## Implementation phases
 1. Establish semantic page structure and responsive navigation.
@@ -46,14 +46,27 @@ Build and publish a polished, responsive florist storefront for **Flowers by Pat
 4. Implement interactive cart, mobile menu, testimonial carousel, newsletter feedback, and smooth anchor navigation.
 5. Add optional Three.js hero atmosphere with graceful fallback.
 6. Add GitHub Pages deployment configuration and `.nojekyll`.
-7. Validate HTML/JS structure, review responsive behavior, and verify deployment status.
+7. Validate HTML/JS structure, review responsive behavior, and verify deployment state.
 
 ## GitHub Pages release strategy
-- Keep production content on `main`.
-- Create a `gh-pages` branch from the finished production commit so GitHub Pages can use a conventional branch-based publishing source with no build step.
+- Keep production source on `main`.
+- Publish the static storefront from a `gh-pages` branch with no build step.
 - Include `.nojekyll` so GitHub serves the static files directly.
-- Verify the repository Pages endpoint and deployment state after the branch is created.
-- If GitHub still requires a one-time publishing-source selection in repository settings, document that exact blocker rather than claiming the site is live.
+- Keep the published branch aligned with the production storefront when future changes are released.
+
+## Implementation status
+- [x] Semantic, responsive storefront implemented.
+- [x] Real flower and flower-shop photography added throughout.
+- [x] Photo source and photographer credits documented in `PHOTO_CREDITS.md`.
+- [x] Desktop and touch-first mobile layouts implemented.
+- [x] LocalStorage cart, quantity controls, totals, and order review implemented.
+- [x] Occasion filters, rotating testimonials, newsletter feedback, and smooth navigation implemented.
+- [x] Optional Three.js ambient-petal layer added without replacing photographic content.
+- [x] Reduced-motion and keyboard-accessibility accommodations added.
+- [x] JavaScript syntax and HTML parsing validated locally.
+- [x] `.nojekyll` added and a `gh-pages` publishing branch created.
+- [x] GitHub repository reports Pages enabled (`has_pages: true`).
+- [ ] Secure payment/checkout provider integration — intentionally not implemented because no merchant/payment account was supplied.
 
 ## Definition of done
 - Responsive florist storefront implemented and committed.
@@ -61,4 +74,4 @@ Build and publish a polished, responsive florist storefront for **Flowers by Pat
 - Optional Three.js effect complements rather than obscures photos/content.
 - Cart and mobile navigation work without a backend.
 - Plan remains in the repository as Markdown.
-- GitHub Pages publication is verified where repository settings permit.
+- GitHub Pages publishing is enabled from the repository’s static release branch.
