@@ -2,6 +2,8 @@
 
 A responsive, editorial florist storefront built as a static GitHub Pages site.
 
+**Live site:** https://prithiraj.github.io/Flowers_By_Pat/
+
 ## What is implemented
 
 - Photography-led hero and florist storytelling sections
@@ -36,4 +38,4 @@ The storefront uses real, free-to-use Unsplash photographs. See [`PHOTO_CREDITS.
 
 ## GitHub Pages
 
-Production lives on `main`. A `gh-pages` branch is used for the published static site when GitHub Pages is enabled for the repository.
+Production lives on `main`. The published static copy lives on `gh-pages` and is available at the live-site URL above while GitHub Pages is enabled for the repository.
